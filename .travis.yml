@@ -90,7 +90,7 @@ before_install:
         sudo make install;
         popd;
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
-        git clone https://github.com/frankmorgner/OpenSCToken.git;
+        git clone https://github.com/frankmorgner/OpenSCToken.git -b new_algs;
         sudo rm -rf /Library/Developer/CommandLineTools;
     fi
   - if [ "$TRAVIS_OS_NAME" = "osx" -a "$TRAVIS_PULL_REQUEST" = "false" -a -n "$encrypted_3b9f0b9d36d1_key" ]; then
